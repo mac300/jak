@@ -7,7 +7,7 @@
 #include <QSqlError>
 #include <QMessageBox>
 #include <QIcon>
-#include<iostream>
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
