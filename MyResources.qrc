@@ -5,4 +5,8 @@
         <file>right.png</file>
         <file>folder.png</file>
     </qresource>
+    <qresource prefix="/databases"/>
+    <qresource prefix="/data">
+        <file>isotopes.db</file>
+    </qresource>
 </RCC>

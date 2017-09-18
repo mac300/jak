@@ -9,7 +9,7 @@ DatabaseDialog::DatabaseDialog(QWidget* parent) :
     mainLayout->addWidget(this->databaseInfo);
 
     QHBoxLayout* databaseNameLayout=new QHBoxLayout;
-    this->databaseName=new QLineEdit(tr("D:/databases/isotopes.db"));
+    this->databaseName=new QLineEdit(tr("../jak/isotopes.db"));
     QPushButton* databaseFileButton=new QPushButton(QIcon(tr(":/icons/folder.png")),"");
     databaseNameLayout->addWidget(this->databaseName);
     databaseNameLayout->addWidget(databaseFileButton);
