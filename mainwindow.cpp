@@ -160,16 +160,8 @@ void MainWindow::createActions()
 
 void MainWindow::setConnectionToDatabase()
 {
-    if(DatabaseDialog(this).exec())
-    {
-        std::cout<<"Database accepted"<<std::endl;
-    }
-    else
-    {
-        std::cout<<"Database rejected"<<std::endl;
-    }
     this->dataBase=QSqlDatabase::addDatabase("QSQLITE");
-    this->dataBase.setDatabaseName("../jak/isotopes.db");
+    this->dataBase.setDatabaseName("./isotopes/isotopes.db");
     this->dataModel=new QSqlQueryModel;
     if(!this->dataBase.isOpen())
     {
