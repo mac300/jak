@@ -39,16 +39,6 @@ SOURCES += main.cpp\
     isotopesgraphview.cpp \
     isotopediagramitem.cpp \
     isotopewidget.cpp \
-    selectedisotopelabel.cpp \
-    isotopeaction.cpp \
-    isotopediagramitem.cpp \
-    isotopesdiagramview.cpp \
-    isotopesgraphview.cpp \
-    isotopesview.cpp \
-    isotopewidget.cpp \
-    main.cpp \
-    mainwidget.cpp \
-    mainwindow.cpp \
     selectedisotopelabel.cpp
 
 HEADERS  += mainwindow.h \
@@ -59,15 +49,6 @@ HEADERS  += mainwindow.h \
     isotopesgraphview.h \
     isotopediagramitem.h \
     isotopewidget.h \
-    selectedisotopelabel.h \
-    isotopeaction.h \
-    isotopediagramitem.h \
-    isotopesdiagramview.h \
-    isotopesgraphview.h \
-    isotopesview.h \
-    isotopewidget.h \
-    mainwidget.h \
-    mainwindow.h \
     selectedisotopelabel.h
 
 RESOURCES += \
