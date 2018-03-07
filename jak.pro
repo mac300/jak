@@ -49,22 +49,14 @@ macx:OBJECTS_DIR = ./common/build/o/mac
 # Uruchomienie windeployqt (windows)
 #-------------------------------------------------
 win32 {
-    CONFIG(debug, debug|release) {
-        QMAKE_POST_LINK = $$(QTDIR)/bin/windeployqt $$OUT_PWD/../JakDebug
-    } else {
-        QMAKE_POST_LINK = $$(QTDIR)/bin/windeployqt $$OUT_PWD/../JakRelease
-    }
+    QMAKE_POST_LINK = $$(QTDIR)/bin/windeployqt $$DESTDIR
 }
 
 #-------------------------------------------------
 # Uruchomienie linuxdeployqt (linux)
 #-------------------------------------------------
 unix {
-    CONFIG(debug, debug|release) {
-        QMAKE_POST_LINK = $$(QTDIR)/bin/linuxdeployqt $$OUT_PWD/../JakDebug/$$TARGET
-    } else {
-        QMAKE_POST_LINK = $$(QTDIR)/bin/linuxdeployqt $$OUT_PWD/../JakRelease/$$TARGET
-    }
+    QMAKE_POST_LINK = $$(QTDIR)/bin/linuxdeployqt $$DESTDIR/$$TARGET
 }
 
 #-------------------------------------------------
