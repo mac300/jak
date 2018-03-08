@@ -10,6 +10,13 @@ TARGET = jak
 TEMPLATE = app
 
 #-------------------------------------------------
+# Plik wykonywalny
+#-------------------------------------------------
+unix {
+    QMAKE_LFLAGS += -no-pie
+}
+
+#-------------------------------------------------
 # Wybór katalogu wynikowego
 #-------------------------------------------------
 CONFIG(debug, debug|release) {
@@ -56,7 +63,7 @@ win32 {
 # Uruchomienie linuxdeployqt (linux)
 #-------------------------------------------------
 unix {
-    QMAKE_POST_LINK = $$(QTDIR)/bin/linuxdeployqt $$DESTDIR/$$TARGET
+    QMAKE_POST_LINK = $$(QTDIR)/bin/linuxdeployqt $$DESTDIR/$$TARGET -no-translations -no-copy-copyright-files
 }
 
 #-------------------------------------------------
