@@ -12,9 +12,9 @@ TEMPLATE = app
 #-------------------------------------------------
 # Plik wykonywalny
 #-------------------------------------------------
-unix {
-    QMAKE_LFLAGS += -no-pie
-}
+#unix {
+#    QMAKE_LFLAGS += -no-pie
+#}
 
 #-------------------------------------------------
 # Wybór katalogu wynikowego
@@ -63,7 +63,7 @@ win32 {
 # Uruchomienie linuxdeployqt (linux)
 #-------------------------------------------------
 unix {
-    QMAKE_POST_LINK = $$(QTDIR)/bin/linuxdeployqt $$DESTDIR/$$TARGET -no-translations -no-copy-copyright-files
+    QMAKE_POST_LINK = $$(QTDIR)/bin/linuxdeployqt $$DESTDIR/$$TARGET -no-translations -no-copy-copyright-files -appimage
 }
 
 #-------------------------------------------------
