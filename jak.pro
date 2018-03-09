@@ -10,7 +10,7 @@ TARGET = jak
 TEMPLATE = app
 
 #-------------------------------------------------
-# Plik wykonywalny
+# Plik wykonywalny (ubuntu mate)
 #-------------------------------------------------
 #unix {
 #    QMAKE_LFLAGS += -no-pie
