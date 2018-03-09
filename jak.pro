@@ -98,4 +98,6 @@ DISTFILES += \
     images/folder.png \
     images/left.png \
     images/logo.png \
-    images/right.png
+    images/right.png \
+    addons/jak.desktop \
+    addons/jak_logo.png
