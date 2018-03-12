@@ -63,7 +63,12 @@ win32 {
 # Uruchomienie linuxdeployqt (linux)
 #-------------------------------------------------
 unix {
-    QMAKE_POST_LINK = $$(QTDIR)/bin/linuxdeployqt $$DESTDIR/$$TARGET -no-translations -no-copy-copyright-files -appimage
+    QMAKE_POST_LINK = mkdir $$OUT_PWD/../tmp
+    QMAKE_POST_LINK += && cp -f $$PWD/addons/* $$OUT_PWD/../tmp
+    QMAKE_POST_LINK += && mv -f $$DESTDIR/$$TARGET $$OUT_PWD/../tmp
+    QMAKE_POST_LINK += && $$(QTDIR)/bin/linuxdeployqt $$OUT_PWD/../tmp/$$TARGET -no-translations -no-copy-copyright-files -appimage
+    QMAKE_POST_LINK += && mv -f $$OUT_PWD/*.AppImage $$DESTDIR/$$TARGET
+    QMAKE_POST_LINK += && rm -R $$OUT_PWD/../tmp
 }
 
 #-------------------------------------------------
