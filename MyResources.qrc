@@ -4,8 +4,11 @@
         <file alias="folder.png">images/folder.png</file>
         <file alias="left.png">images/left.png</file>
         <file alias="right.png">images/right.png</file>
-        <file alias="exit.png">images/exit.png</file>
         <file alias="export.png">images/export.png</file>
+        <file alias="exit.png">images/exit.png</file>
         <file alias="info.png">images/info.png</file>
+    </qresource>
+    <qresource prefix="/text">
+        <file alias="readme.txt">text/readme.txt</file>
     </qresource>
 </RCC>

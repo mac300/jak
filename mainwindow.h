@@ -3,6 +3,7 @@
 
 #include "mainwidget.h"
 #include "isotopeaction.h"
+#include "infodialog.h"
 #include <QMainWindow>
 #include <QMenu>
 #include <QAction>
@@ -25,6 +26,8 @@ public:
     QSqlQueryModel* getDataModel();
     QList<QAction*> getIsotopeActions() const;
 
+private slots:
+    void showInfo();
 
 private:
     void setConnectionToDatabase();
